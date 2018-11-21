@@ -1,0 +1,83 @@
+@import "../accets/style/common";
+
+.TodoItem {
+  position: relative;
+
+  .check {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #eeeeee;
+    border-radius: 50%;
+    margin: 15px;
+    position: relative;
+    cursor: pointer;
+
+    &.hide {
+      display: none;
+    }
+
+    .icon-check {
+      opacity: 0;
+      float: left;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &.active {
+        opacity: 1;
+        color: rgb(34, 131, 221);
+      }
+    }
+
+    .check-box {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+
+  .content {
+    line-height: 60px;
+    vertical-align: top;
+    width: calc(100% - 60px);
+    float: right;
+    display: inline-block;
+    border-bottom: solid 1px #eeeeee;
+
+    &.completed {
+      text-decoration: line-through;
+      color: #999999;
+    }
+  }
+
+  .modify {
+    width: calc(100% - 60px);
+    left: 60px;
+    top: 0;
+    height: 60px;
+    position: absolute;
+    padding-left: 10px;
+    border: 1px solid #999;
+    box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+
+    &.show {
+      display: block
+    }
+  }
+
+  .icon-close {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    cursor: pointer;
+  }
+
+  &:hover .icon-close {
+    display: block;
+  }
+}

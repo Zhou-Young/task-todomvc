@@ -1,0 +1,116 @@
+//重置样式
+img {
+  border: none;
+  display: block;
+}
+
+p {
+  word-wrap: break-word;
+  word-break: normal;
+  word-break: break-all;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1; //兼容ie67
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; //字体平滑
+}
+
+li {
+  list-style: none;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dd,
+ul,
+ol,
+li,
+pre,
+fieldset,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: none;
+}
+
+a {
+  background: transparent;
+  text-decoration: none;
+
+  &:active {
+    outline: 0;
+  }
+}
+
+.ic {
+  font-size: .16rem;
+}
+
+h1 {
+  font-size: .48rem;
+}
+
+h2 {
+  font-size: .36rem;
+}
+
+h3 {
+  font-size: .32rem;
+}
+
+p,
+span {
+  font-size: .28rem;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

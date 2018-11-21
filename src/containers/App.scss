@@ -1,0 +1,118 @@
+@import "../accets/style/common";
+
+.App {
+  .title {
+    color: #dd9999;
+    font-size: 48px;
+    text-align: center;
+    line-height: 100px;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #999999;
+    line-height: 50px;
+  }
+
+  .todo {
+    background: #fff;
+    margin: 130px 0 40px 0;
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin: 0 auto;
+
+    &:before {
+      content: '';
+      width: 490px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+      position: absolute;
+      bottom: -5px;
+      height: 4px;
+      background-color: #ffffff;
+      left: 5px;
+    }
+
+    &:after {
+      content: '';
+      width: 480px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+      position: absolute;
+      bottom: -10px;
+      height: 4px;
+      background-color: #ffffff;
+      left: 10px;
+    }
+
+    .icon-unfold {
+      position: absolute;
+      left: 22px;
+      top: 17px;
+      cursor: pointer;
+      color: #e6e6e6;
+
+      &.active {
+        color: #333333;
+      }
+    }
+
+    .todo-new {
+      width: 100%;
+      padding: 16px 16px 16px 60px;
+      border: none;
+      background: rgba(0, 0, 0, 0.003);
+      box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+    }
+
+    .todo-func {
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      color: #777777;
+      font-size: 12px;
+      line-height: 24px;
+      position: relative;
+
+      .count {
+        z-index: 99;
+      }
+
+      .func {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        right: 0;
+        left: 0;
+        text-align: center;
+        cursor: pointer;
+
+        li {
+          display: inline-block;
+          margin: 0 10px;
+          padding: 0 6px;
+
+          &.active {
+            border: solid 1px rgba(175, 47, 47, 0.2);
+            border-radius: 2px;
+          }
+
+        }
+      }
+
+      .clear {
+        float: right;
+        cursor: pointer;
+        z-index: 99;
+
+        &.show {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
